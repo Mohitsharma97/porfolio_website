@@ -28,7 +28,7 @@ pipeline {
      }
       stage("Deploy application") { 
          steps { 
-           sh 'docker run -dt -p 80:80 mohit/docker-react'
+           sh 'docker run -dt --name mohit/docker-react -p 80:80 mohit/docker-react'
          }
      }
   
