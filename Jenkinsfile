@@ -22,13 +22,13 @@ pipeline {
      
      stage("Stop Old App") { 
          steps { 
-           sh 'docker ps -f name=mohit/docker-react -q | xargs --no-run-if-empty docker container stop'
-           sh 'docker container ls -a -fname=mohit/docker-react -q | xargs -r docker container rm'
+           sh 'docker ps -f name=dockerReact -q | xargs --no-run-if-empty docker container stop'
+           sh 'docker container ls -a -fname=dockerReact -q | xargs -r docker container rm'
          }
      }
       stage("Deploy application") { 
          steps { 
-           sh 'docker run -dt --name mohit/docker-react -p 80:80 mohit/docker-react'
+           sh 'docker run -dt --name dockerReact -p 80:80 mohit/docker-react'
          }
      }
   
