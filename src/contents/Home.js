@@ -10,7 +10,7 @@ class Home extends Component {
         return (
             <div className="condiv home">
             <img src={profilepic} alt="ProfilePic" className="profilepic"></img>
-            <ReactTypingEffect className="typingeffect" text={['s','I am a developer']} speed={100} eraseDelay={700}/>
+            <ReactTypingEffect className="typingeffect" text={['Hi','I am a developer']} speed={100} eraseDelay={700}/>
             <Social />
             </div>
             )
